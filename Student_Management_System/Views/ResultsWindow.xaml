@@ -1,0 +1,128 @@
+﻿<Window x:Class="Student_Management_System.Views.ResultsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Student_Management_System.ViewModels"
+        mc:Ignorable="d"
+        Title="ResultsWindow" Height="350" Width="600" Background="WhiteSmoke"
+        WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <local:ResultsViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <StackPanel VerticalAlignment="Top" Orientation="Horizontal" Margin="10 20 10 10" HorizontalAlignment="Center">
+            <TextBlock Text="Student Name :" Width="100" FontWeight="Bold"/>
+            <TextBlock Text="{Binding SelectedStudent3.FirstName,UpdateSourceTrigger=PropertyChanged}" Width="100" Background="Silver"/>
+            <TextBlock Text="Student Reg.No :" Width="100" Margin="5 0 0 0" FontWeight="Bold"/>
+            <TextBlock Text="{Binding SelectedStudent3.RegNo,UpdateSourceTrigger=PropertyChanged}" Width="100" Background="Silver"/>
+            <TextBlock Text="GPA Value :" Width="80" Margin="5 0 0 0" FontWeight="Bold"/>
+            <TextBlock Text="{Binding SelectedStudent3.Gpa,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" Width="50" Background="Silver"/>
+        </StackPanel>
+
+        <Grid Margin="10 100 10 10">
+            <Grid Margin="10" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="60"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" Margin="5">
+                    <ListView ItemsSource="{Binding ListRMod,UpdateSourceTrigger=PropertyChanged}">
+                        <ListView.View>
+                            <GridView>
+                                <GridView.Columns>
+                                    <GridViewColumn Header="Module Code" DisplayMemberBinding="{Binding Code}"/>
+                                    <GridViewColumn Header="Module Name" DisplayMemberBinding="{Binding Name}"/>
+                                </GridView.Columns>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+
+                <Grid Grid.Column="1" Margin="5">
+                    <ListView ItemsSource="{Binding ListGrade,UpdateSourceTrigger=PropertyChanged}">
+                        <ListView.View>
+                            <GridView>
+                                <GridView.Columns>
+                                    <GridViewColumn Header="Grade" DisplayMemberBinding="{Binding Grade}"/>
+                                </GridView.Columns>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+                <Canvas Grid.ColumnSpan="2">
+                    <Rectangle Width="553" Height="570" Stroke="#cc00ff"
+                     StrokeThickness="2"
+                     Opacity="0.2" RenderTransformOrigin="0.5,0.5" Canvas.Left="259" Canvas.Top="-411" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="46.111"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <SolidColorBrush Color="#cc00ff"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Canvas>
+                <Canvas Grid.ColumnSpan="2">
+                    <Rectangle Width="379" Height="337" Stroke="#cc00ff"
+                     StrokeThickness="2"
+                     Opacity="0.2" RenderTransformOrigin="0.5,0.5" Canvas.Left="-371" Canvas.Top="-116" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="45.87"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <SolidColorBrush Color="#cc00ff"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Canvas>
+                <Canvas Grid.ColumnSpan="2">
+                    <Rectangle Width="568" Height="586" Stroke="#cc00ff"
+                     StrokeThickness="2"
+                     Opacity="0.2" RenderTransformOrigin="0.5,0.5" Canvas.Left="269" Canvas.Top="-56" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="41.976"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <SolidColorBrush Color="#cc00ff"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Canvas>
+                <Canvas Grid.ColumnSpan="2">
+                    <Rectangle Width="381" Height="378" Stroke="#cc00ff"
+                     StrokeThickness="2"
+                     Opacity="0.3" RenderTransformOrigin="0.5,0.5" Canvas.Left="-192" Canvas.Top="371" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="44.741"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <SolidColorBrush Color="#cc00ff"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Canvas>
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+
+</Window>

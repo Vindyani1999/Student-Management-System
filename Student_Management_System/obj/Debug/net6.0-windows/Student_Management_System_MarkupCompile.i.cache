@@ -1,0 +1,20 @@
+﻿Student_Management_System
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\kachv\OneDrive\Documents\5th Semester\grouProject-main\Student_Management_System\obj\Debug\net6.0-windows\
+Student_Management_System
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+C:\Users\kachv\OneDrive\Documents\5th Semester\grouProject-main\Student_Management_System\App.xaml
+8440677365
+
+39-914454521
+215-150727301
+PasswordBox\PasswordBox.xaml;Views\AddGrade.xaml;Views\AddModule.xaml;Views\AddStudent.xaml;Views\AdminWindow.xaml;Views\LoginWindow.xaml;Views\ResultsWindow.xaml;Views\StudentWindow.xaml;
+
+True
+
